@@ -1,0 +1,3 @@
+[submodule "docker-practical"]
+	path = docker-practical
+	url = git@github.com:teepobharu/docker-practical.git
