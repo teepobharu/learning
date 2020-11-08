@@ -1,3 +1,12 @@
 [submodule "docker-practical"]
 	path = docker-practical
 	url = git@github.com:teepobharu/docker-practical.git
+[submodule "scala-rockjvm1"]
+	path = scala-rockjvm1
+	url = git@github.com:teepobharu/scala-rockjvm1.git
+[submodule "rjvm1-filesystem"]
+	path = rjvm1-filesystem
+	url = git@github.com:teepobharu/rjvm1-filesystem.git
+[submodule "Data/UdemyPy_DS-ML-BootCamp"]
+	path = Data/UdemyPy_DS-ML-BootCamp
+	url = git@github.com:teepobharu/UdemyPy_DS-ML-BootCamp.git
