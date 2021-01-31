@@ -10,3 +10,6 @@
 [submodule "Data/UdemyPy_DS-ML-BootCamp"]
 	path = Data/UdemyPy_DS-ML-BootCamp
 	url = git@github.com:teepobharu/UdemyPy_DS-ML-BootCamp.git
+[submodule "Line/line__firebase_functions_tips_ts"]
+	path = Line/line__firebase_functions_tips_ts
+	url = git@github.com:teepobharu/line__firebase_functions_tips_ts.git
