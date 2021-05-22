@@ -13,3 +13,12 @@
 [submodule "Line/line__firebase_functions_tips_ts"]
 	path = Line/line__firebase_functions_tips_ts
 	url = git@github.com:teepobharu/line__firebase_functions_tips_ts.git
+[submodule "Project/Tools/retroactive"]
+	path = Project/Tools/retroactive
+	url = git@github.com:teepobharu/retroactive.git
+[submodule "Chatbot/Diagflow/myFriendlyQuote"]
+	path = Chatbot/Diagflow/myFriendlyQuote
+	url = git@github.com:teepobharu/myFriendlyQuote.git
+[submodule "Website/webpack-react"]
+	path = Website/webpack-react
+	url = git@github.com:teepobharu/webpack-react.git

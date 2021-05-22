@@ -10,7 +10,7 @@
 
 currentDir=$(pwd | sed -E 's#/.*/##')
 # org="brightdays"
-isPrivate=false
+isPrivate=true
 # https://jonalmeida.com/posts/2013/05/26/different-ways-to-implement-flags-in-bash/
 # Options : https://sookocheff.com/post/bash/parsing-bash-script-arguments-with-shopts/
 
@@ -58,6 +58,7 @@ read -p "yY or no ?" isConf
 [[ $isConf =~ y|Y ]] && \
 token=$GH_COM && \
 curl --fail -X POST -u teepobharu:${GH_COM} https://api.github.com/user/repos -d '{"name":"'"$repo"'", "private": "'"$isPrivate"'"}' > /dev/null;
+
 if [ $? -eq 0 ]; then
     echo "Success adding $repo"
 else 
@@ -80,12 +81,12 @@ git commit -m "initial"
 
 # Push to remote
 read -p "Want to also Push ? [Y/y] " isPush
-[[ $isPush ]] && \
+[[ $isPush =~ y|Y ]] && \
 git remote add origin ${repoSite} && \ 
 git push -u origin master || \
 echo "Please run this command to push" && \
 echo "git push -u origin master"
-echo "${repoSite/git@/https://}"
+echo "${${repoSite/git@/https://}/com:/com}"
 
 ## TO COMMENT 
 
