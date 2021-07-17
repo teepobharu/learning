@@ -1,0 +1,35 @@
+{
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "build": "webpack",
+    "dev": "webpack-dev-server --inline --content-base public --history-api-fallback",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "12"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase": "^8.2.4",
+    "firebase-admin": "^9.2.0",
+    "firebase-functions": "^3.11.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
+    "webpack": "^5.17.0"
+  },
+  "devDependencies": {
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.6.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0",
+    "webpack-cli": "^4.4.0"
+  },
+  "type": "module",
+  "private": true
+}

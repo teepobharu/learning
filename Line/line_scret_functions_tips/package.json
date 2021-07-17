@@ -1,0 +1,19 @@
+{
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "prerequisite": "npm i -g firebase-tools webpack",
+    "deploy": "webpack --config functions/webpack.config.js; cd functions/_dist/; npm install; firebase deploy --only functions"
+  },
+  "engines": {
+    "node": "12"
+  },
+  "main": "index.js",
+  "devDependencies": {
+    "webpack": "^5.17.0",
+    "webpack-cli": "^4.4.0"
+  },
+  "type": "module",
+  "private": true
+}

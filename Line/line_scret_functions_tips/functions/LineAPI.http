@@ -1,0 +1,52 @@
+
+// HTTP Request
+// Headers
+# Authorization: Bearer (CHANNEL ACCESS TOKEN จากขั้นตอนที่ 1)
+###
+
+@lineapi = https://api.line.me/v2
+POST {{lineapi}}/broadcast
+Authorization: Bearer f3FwePnPmcmrlxwsb8XmJBBHxXIPYBaZwGKsqyUFz8BA2w76pCRiSqf1JN9D+fz8FshRBsuQIR2eHBuNtBFF7rwGUA9Yz7rZUqWjLB2bTQ9R4eFjoxqutshXDpEKypzd7v0osz+gnmzK+IuiATRSgQdB04t89/1O/w1cDnyilFU=
+Content-Type: application/json
+
+{
+    "messages": [
+        {
+          "type": "text",
+          "text": "TESTSETSETES"
+        }
+	  ]
+}
+
+###
+// TO FIREBASE API
+
+@local = http://localhost:5001
+@fbPath = udemy-ng-http-cc6cb/us-central1
+@fburl = https://us-central1-udemy-ng-http-cc6cb.cloudfunctions.net
+@ngrok = https://1cec4bc68884.ngrok.io
+
+
+# POST {{fburl}}/LineBot
+# POST {{ngrok}}/{{fbPath}}/LineBot
+POST {{local}}/{{fbPath}}/helloW
+Content-Type: application/json
+
+{
+  "events": [
+    {
+      "type": "message",
+      "replyToken": "b669db6edb5e48dbb5961ab8",
+      "source": {
+        "userId": "U3c28a70ed7c5e7ce2c9a7597",
+        "type": "user"
+      },
+      "timestamp": 1531072356142,
+      "message": {
+        "type": "text",
+        "id": "82347",
+        "text": "ทดสอบ"
+      }
+    }
+  ]
+}
